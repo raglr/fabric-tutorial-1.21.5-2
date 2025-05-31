@@ -1,8 +1,8 @@
 package net.raglr.tutorialmod.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -20,7 +20,9 @@ public class ModItems {
         TutorialMod.LOGGER.info("Registering mod items for " + TutorialMod.MOD_ID);
     }
 
-    ItemGroupEvents.ModifyEntries(ItemGroups.INGREDIENTS).register(entries -> { entries.add(RUBY);
+    ItemGroupEvents.modifyEntries(ItemGroups.INGREDIENTS).register(entries -> {
+        entries.add(RUBY);
+    });
 
 
 }
