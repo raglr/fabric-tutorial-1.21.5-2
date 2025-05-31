@@ -10,7 +10,7 @@ import net.raglr.tutorialmod.TutorialMod;
 
 public class ModItems {
 
-    public static final Item RUBY = registerItem("ruby", new Item(new Item.Settings()));
+    public static final Item RAW_CAMEL_MEAT = registerItem("raw_camel_meat", new Item(new Item.Settings()));
 
     private static Item registerItem(String name, Item item){
         return Registry.register(Registries.ITEM, Identifier.of(TutorialMod.MOD_ID, name), item);
@@ -18,12 +18,11 @@ public class ModItems {
 
     public static void registerModItem(){
         TutorialMod.LOGGER.info("Registering mod items for " + TutorialMod.MOD_ID);
+
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
+            entries.add(RAW_CAMEL_MEAT);
+        });
+
     }
-
-    ItemGroupEvents.modifyEntries(ItemGroups.INGREDIENTS).register(entries -> {
-        entries.add(RUBY);
-    });
-
-
 }
-
