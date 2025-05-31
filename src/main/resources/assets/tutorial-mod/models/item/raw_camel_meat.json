@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft: item/generated",
-  "texture": {
-    "layer0": "tutorialmod:/raw_camel_meat"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "tutorialmod:item/raw_camel_meat"
   }
 }
